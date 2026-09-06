@@ -29,6 +29,11 @@ jobs:
         with:
           go-version-file: go.mod
       - run: go build ./...
+      - uses: actions/upload-artifact@v7
+        with: 
+          name: build-report
+          path: build-report
+          retention-days: 30
 
   test:
     runs-on: ubuntu-latest
@@ -39,3 +44,8 @@ jobs:
         with:
           go-version-file: go.mod
       - run: go test ./... -race
+      - uses: actions/upload-artifact@v7
+        with: 
+          name: test-report
+          path: test-report
+          retention-days: 30
