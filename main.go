@@ -1,9 +1,13 @@
-package nomaddriverunikraft
+package main
 
 import (
 	"fmt"
 )
 
-func main(){
-	fmt.Println("hello world")
+func Run() string {
+	return "HACK THE PLANET"
+}
+
+func main() {
+	fmt.Println(Run())
 }

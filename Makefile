@@ -2,6 +2,7 @@
 
 fmt:
 	go fmt ./...
+	go run golang.org/x/tools/cmd/goimports -w .
 
 lint:
 	golangci-lint run ./...
