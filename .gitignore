@@ -1,1 +1,3 @@
 bin/
+nomad-driver-unikraft
+coverage.out
